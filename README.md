@@ -1,6 +1,7 @@
 # Pós-Formatacao
 
 Script para ser executado após uma formatação para instalação de algums softwares básicos para o dia a dia.
+`Esse script foi desenvolvido para distribuições deverivadas do Ubuntu`
 
 Baixe o script e execute-o localmente. O script ser verificado e revisado antes de proceder com a instalação local.
 
