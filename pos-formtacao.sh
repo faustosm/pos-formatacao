@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 echo 
 echo "----------------------------------------------------------------------------------------------------------"
@@ -12,7 +12,7 @@ sudo apt update -y && sudo apt upgrade -y
 echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: INSTALAÇÃO DE FERRAMENTAS/PROGRAMAS :: |\n\n"
 
-sudo apt install nano git htop wget gpg curl gdebi-core dpkg -y
+sudo apt install nano vim git htop unzip wget gpg curl gdebi-core dpkg -y
 
 echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: Instalação navegador Google chrome :: |\n\n"
@@ -33,7 +33,7 @@ printf "| :: Instação terminator :: |\n\n"
 sudo apt install terminator -y
 
 echo "----------------------------------------------------------------------------------------------------------"
-printf                                               "| :: DEVOPS TOOLS :: |\n\n"
+printf "| :: DEVOPS TOOLS :: |\n\n"
 
 echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: Instação vscode :: |\n\n"
@@ -82,6 +82,21 @@ printf "| :: Instação AWS Cli :: |\n\n"
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação terraform hashicorp :: |\n\n"
+
+https://www.terraform.io/downloads.html # verificar a última versão do terraform
+
+wget https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_linux_amd64.zip
+unzip terraform_1.1.7_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+
+printf "| :: Instação helm3:: |\n\n"
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
 
 echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: remmina :: |\n\n"
