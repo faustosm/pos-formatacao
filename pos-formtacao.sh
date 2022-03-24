@@ -1,42 +1,41 @@
 #!/usr/bin/env bash
 
+echo "----------------------------------------------------------------------------------------------------------"
 printf                           "| :: EXECUTE ESSE SCRIPT COM PRIVILÉGIOS DE SUPER USUÁRIO :: |\n\n"
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
+echo "----------------------------------------------------------------------------------------------------------"
 printf                                      "| :: ATUALIZAÇÃO DO SO UBUNTU 20.04 :: |\n\n"
 
-sudo apt update -y
+sudo apt update -y && sudo apt upgrade -y
 
-sudo apt upgrade -y
-
-echo "----------------------------------------------------------------------------------------------------------------------------"
+echo "----------------------------------------------------------------------------------------------------------"
 printf                                     "| :: INSTALAÇÃO DE FERRAMENTAS/PROGRAMAS :: |\n\n"
 
 sudo apt install nano git htop wget gpg curl gdebi-core dpkg -y
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instalação navegador Google chrome :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instalação navegador Google chrome :: |\n\n"
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instalação navegador Vivald :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instalação navegador Vivald :: |\n\n"
 
 wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
 sudo add-apt-repository --yes 'deb https://repo.vivaldi.com/archive/deb/ stable main' 
 sudo apt update && sudo apt install vivaldi-stable -y
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação terminator :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação terminator :: |\n\n"
 
 sudo apt install terminator -y
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo                                               "| :: DEVOPS TOOLS :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf                                               "| :: DEVOPS TOOLS :: |\n\n"
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação vscode :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação vscode :: |\n\n"
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -46,8 +45,8 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Sublime Text :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Sublime Text :: |\n\n"
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -55,75 +54,75 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação k9s :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação k9s :: |\n\n"
 
 sudo snap install k9s
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação Lenss :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação Lenss :: |\n\n"
 
 sudo snap install kontena-lens --classic
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação kubectl 'Kubernetes' :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação kubectl 'Kubernetes' :: |\n\n"
 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Postman :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Postman :: |\n\n"
 
 sudo snap install postman
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação AWS Cli :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação AWS Cli :: |\n\n"
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: remmina :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: remmina :: |\n\n"
 
 sudo snap install remmina
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Ferramentas extras :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Ferramentas extras :: |\n\n"
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Todoist: To-Do List & Tasks :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Todoist: To-Do List & Tasks :: |\n\n"
 
 sudo snap install todoist
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação flameshot 'Screenshot' :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação flameshot 'Screenshot' :: |\n\n"
 
 sudo snap install flameshot
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação flameshot SimpleScreenRecorder :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação flameshot SimpleScreenRecorder :: |\n\n"
 
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -r -y
 sudo apt-get update -y
 sudo apt-get install simplescreenrecorder -y
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -r -y
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação Evernote :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação Evernote :: |\n\n"
 
 wget https://cdn1.evernote.com/boron/linux/builds/Evernote-10.7.6-linux-ddl-ga-2321.deb -O evernote.deb
 sudo dpkg -i evernote.deb
 sudo apt-get install -f
 sudo apt install ./evernote.deb
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação zsh :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação zsh :: |\n\n"
 
 sudo apt install zsh -y
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Instação Oh My Zsh :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Instação Oh My Zsh :: |\n\n"
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
@@ -135,8 +134,8 @@ chsh -s $(which zsh)
 # https://marcelosena.com/como-instalar-o-shell-zsh-oh-my-zsh-tema-e-plugins/
 
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Removendo arquivos não necessários pós instalação :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Removendo arquivos não necessários pós instalação :: |\n\n"
 
 rm google*
 rm kubectl*
@@ -144,12 +143,12 @@ rm evernote*
 rm -r aws*
 echo "\nRemovido arquivos!!! " 
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Limpando cache do apt no ubuntu :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Limpando cache do apt no ubuntu :: |\n\n"
 sudo apt-get clean -y
-echo "Limpado cache!!! "
+printf "Limpado cache!!! \n\n"
 
-echo "----------------------------------------------------------------------------------------------------------------------------"
-echo "| :: Removido kernels antigos no Ubuntu :: |\n"
+echo "----------------------------------------------------------------------------------------------------------"
+printf "| :: Removido kernels antigos no Ubuntu :: |\n\n"
 sudo apt-get autoremove --purge
-echo "\nRemovido kernels antigos!!! \n"
+printf "\nRemovido kernels antigos!!! \n\n"
