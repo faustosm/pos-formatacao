@@ -1,4 +1,4 @@
-# Pós-Formatacao
+# Pós-Formatação
 
 Script para ser executado após uma formatação para instalação de algums softwares básicos para o dia a dia.
 
