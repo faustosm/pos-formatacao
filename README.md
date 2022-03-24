@@ -9,4 +9,6 @@ Baixe o script e execute-o localmente. O script ser verificado e revisado antes 
 
 `./pos-formtacao.sh`
 
-Sim, você pode executar `curl https://raw.githubusercontent.com/faustosm/pos-formatacao/main/pos-formtacao.sh | bash` se você gosta de viver perigosamente.
+Sim, você pode executar o script abaixo se você gosta de viver perigosamente.
+
+`curl https://raw.githubusercontent.com/faustosm/pos-formatacao/main/pos-formtacao.sh | bash`
