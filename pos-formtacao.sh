@@ -12,7 +12,7 @@ sudo apt update -y && sudo apt upgrade -y
 echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: INSTALAÇÃO DE FERRAMENTAS/PROGRAMAS :: |\n\n"
 
-sudo apt install nano vim git htop unzip wget gpg curl gdebi-core dpkg -y
+sudo apt install nano software-properties-common vim git htop unzip wget gpg curl gdebi-core snapd dpkg -y
 
 echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: Instalação navegador Google chrome :: |\n\n"
@@ -92,6 +92,7 @@ wget https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_linux_amd64.
 unzip terraform_1.1.7_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 
+echo "----------------------------------------------------------------------------------------------------------"
 printf "| :: Instação helm3:: |\n\n"
 
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
