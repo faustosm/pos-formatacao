@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-echo -e                         "| :: EXECUTE ESSE SCRIPT COM PRIVILÉGIOS DE SUPER USUÁRIO :: |\n"
+printf                           "| :: EXECUTE ESSE SCRIPT COM PRIVILÉGIOS DE SUPER USUÁRIO :: |\n\n"
 
 echo "----------------------------------------------------------------------------------------------------------------------------"
-echo -e                                      "| :: ATUALIZAÇÃO DO SO UBUNTU 20.04 :: |\n"
+printf                                      "| :: ATUALIZAÇÃO DO SO UBUNTU 20.04 :: |\n\n"
 
 sudo apt update -y
 
 sudo apt upgrade -y
 
 echo "----------------------------------------------------------------------------------------------------------------------------"
-echo -e                                     "| :: INSTALAÇÃO DE FERRAMENTAS/PROGRAMAS :: |\n"
+printf                                     "| :: INSTALAÇÃO DE FERRAMENTAS/PROGRAMAS :: |\n\n"
 
 sudo apt install nano git htop wget gpg curl gdebi-core dpkg -y
 
