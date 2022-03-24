@@ -1,10 +1,12 @@
 # pos-formatacao
 ## Scritp para ser executado após uma formatação
 
-Baixe o script e execute-o localmente. O script está bem escrito e documentado, podendo ser verificado e revisado antes de proceder com a instalação local.
+Baixe o script e execute-o localmente. O script ser verificado e revisado antes de proceder com a instalação local.
 
-`curl -fsSL -o pos-formtacao.sh https://raw.githubusercontent.com/faustosm/pos-formatacao/main/pos-formtacao
-chmod 700 pos-formtacao.sh
-./pos-formtacao.sh`
+`curl -fsSL -o pos-formtacao.sh https://raw.githubusercontent.com/faustosm/pos-formatacao/main/pos-formtacao`
+
+`chmod 700 pos-formtacao.sh`
+
+`./pos-formtacao.sh`
 
 Sim, você pode executar `curl https://raw.githubusercontent.com/faustosm/pos-formatacao/main/pos-formtacao.sh | bash` se você gosta de viver perigosamente.
