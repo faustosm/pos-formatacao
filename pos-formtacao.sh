@@ -1,4 +1,4 @@
-!/bin/bash
+#!/usr/bin/env bash
 
 echo "----------------------------------------------------------------------------------------------------------------------------"
 echo "| :: Execute esse script com privilégios de super usuário :: |\n"
