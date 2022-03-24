@@ -4,7 +4,7 @@ Script para ser executado após uma formatação para instalação de algums sof
 
 `Esse script foi desenvolvido para distribuições deverivadas do Ubuntu`
 
-Baixe o script e execute-o localmente. O script ser verificado e revisado antes de proceder com a instalação local.
+Baixe o script e execute-o localmente. O script pode ser verificado e revisado antes de proceder com a instalação local.
 
 `curl -fsSL -o pos-formtacao.sh https://raw.githubusercontent.com/faustosm/pos-formatacao/main/pos-formtacao.sh`
 
