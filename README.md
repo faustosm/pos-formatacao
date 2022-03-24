@@ -1,5 +1,6 @@
-# pos-formatacao
-## Scritp para ser executado após uma formatação
+# Pós-Formatacao
+
+Scritp para ser executado após uma formatação para instalação de algums softwares básicos para o dia a dia.
 
 Baixe o script e execute-o localmente. O script ser verificado e revisado antes de proceder com a instalação local.
 
